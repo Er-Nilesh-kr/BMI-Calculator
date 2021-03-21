@@ -40,7 +40,7 @@ class _InputPageState extends State<InputPage> {
                     ? kactiveCardColour
                     : kinactiveCardColour,
                 cardChild: IconContent(
-                  icon: FontAwesomeIcons.mars,
+                  icon: FontAwesomeIcons.male,
                   label: 'MALE',
                   icolor: selectedGender == Gender.male
                       ? Colors.blue
@@ -59,7 +59,7 @@ class _InputPageState extends State<InputPage> {
                     ? kactiveCardColour
                     : kinactiveCardColour,
                 cardChild: IconContent(
-                  icon: FontAwesomeIcons.venus,
+                  icon: FontAwesomeIcons.female,
                   label: 'FEMALE',
                   icolor: selectedGender == Gender.female
                       ? Colors.pink
@@ -85,11 +85,11 @@ class _InputPageState extends State<InputPage> {
                   textBaseline: TextBaseline.alphabetic,
                   children: [
                     Text(
-                      '180',
+                      height.toString(),
                       style: kNumberTextSyle,
                     ),
                     Text(
-                      height.toString(),
+                      ' cm',
                       style: klabelTextStyle,
                     )
                   ],
