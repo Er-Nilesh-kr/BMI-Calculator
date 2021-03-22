@@ -127,6 +127,19 @@ class _InputPageState extends State<InputPage> {
                         weight.toString(),
                         style: kNumberTextSyle,
                       ),
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            RoundIconButton(
+                              icon: FontAwesomeIcons.plusCircle,
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            RoundIconButton(
+                              icon: FontAwesomeIcons.minusCircle,
+                            )
+                          ])
                     ],
                   ),
                 ),
@@ -144,6 +157,27 @@ class _InputPageState extends State<InputPage> {
           height: kbottomContainerHeight,
         )
       ]),
+    );
+  }
+}
+
+class RoundIconButton extends StatelessWidget {
+  final IconData icon;
+
+  RoundIconButton({this.icon});
+
+  @override
+  Widget build(BuildContext context) {
+    return RawMaterialButton(
+      elevation: 8.0,
+      child: Icon(icon),
+      onPressed: () {},
+      constraints: BoxConstraints.tightFor(
+        width: 56.0,
+        height: 56.0,
+      ),
+      shape: CircleBorder(),
+      fillColor: Color(0xFF4C4F5E),
     );
   }
 }
