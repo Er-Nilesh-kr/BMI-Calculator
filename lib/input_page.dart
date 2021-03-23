@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:bmi_calculator/reusable_card.dart';
 import 'package:bmi_calculator/constants.dart';
+import 'package:bmi_calculator/result_page.dart';
 
 enum Gender {
   male,
@@ -199,11 +200,24 @@ class _InputPageState extends State<InputPage> {
             ],
           ),
         ),
-        Container(
-          color: kbottomContainerColour,
-          margin: EdgeInsets.only(top: 10.0),
-          width: double.infinity,
-          height: kbottomContainerHeight,
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return ResultPage();
+                },
+              ),
+            );
+          },
+          child: Container(
+            child: Text('Calculate'),
+            color: kbottomContainerColour,
+            margin: EdgeInsets.only(top: 10.0),
+            width: double.infinity,
+            height: kbottomContainerHeight,
+          ),
         )
       ]),
     );
