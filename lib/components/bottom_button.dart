@@ -4,8 +4,9 @@ import '../components/constants.dart';
 class BottomButton extends StatelessWidget {
   final Function onTap;
   final String buttonTitle;
+  final Color colour;
 
-  BottomButton({@required this.onTap, @required this.buttonTitle});
+  BottomButton({@required this.onTap, @required this.buttonTitle, this.colour});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class BottomButton extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           padding: EdgeInsets.only(top: 25.0),
-          color: kbottomContainerColour,
+          color: colour,
           margin: EdgeInsets.only(top: 10.0),
           width: double.infinity,
           height: kbottomContainerHeight,
