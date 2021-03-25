@@ -106,7 +106,9 @@ class _InputPageState extends State<InputPage> {
                     max: 250.0,
                     activeColor: selectedGender == Gender.male
                         ? Colors.blue
-                        : Colors.deepPurpleAccent.shade700,
+                        : selectedGender == Gender.female
+                            ? Colors.pink
+                            : Colors.deepPurpleAccent.shade700,
                     inactiveColor: Color(0xFF8D8E98),
                     onChanged: (double newValue) {
                       setState(() {
@@ -207,6 +209,11 @@ class _InputPageState extends State<InputPage> {
         ),
         BottomButton(
           buttonTitle: 'CALCULATE',
+          colour: selectedGender == Gender.male
+              ? Colors.blue.shade700
+              : selectedGender == Gender.female
+                  ? Colors.pink.shade600
+                  : Colors.deepPurpleAccent.shade700,
           onTap: () {
             CalculatorBrain calc =
                 CalculatorBrain(height: height, weight: weight);
@@ -218,6 +225,11 @@ class _InputPageState extends State<InputPage> {
                     bmiResult: calc.calculateBMI(),
                     resultText: calc.getResult(),
                     interpretation: calc.getInterpretation(),
+                    colour: selectedGender == Gender.male
+                        ? Colors.blue.shade700
+                        : selectedGender == Gender.female
+                            ? Colors.pink.shade600
+                            : Colors.deepPurpleAccent.shade700,
                   );
                 },
               ),
