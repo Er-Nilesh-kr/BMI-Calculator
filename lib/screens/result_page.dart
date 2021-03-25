@@ -41,7 +41,7 @@ class ResultPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Text(
-                    resultText,
+                    resultText.toUpperCase(),
                     style: kResultTextStyle,
                     textAlign: TextAlign.center,
                   ),
