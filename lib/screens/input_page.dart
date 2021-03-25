@@ -104,7 +104,9 @@ class _InputPageState extends State<InputPage> {
                     value: height.toDouble(),
                     min: 120.0,
                     max: 250.0,
-                    activeColor: Colors.deepPurpleAccent.shade700,
+                    activeColor: selectedGender == Gender.male
+                        ? Colors.blue
+                        : Colors.deepPurpleAccent.shade700,
                     inactiveColor: Color(0xFF8D8E98),
                     onChanged: (double newValue) {
                       setState(() {
