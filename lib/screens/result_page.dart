@@ -7,11 +7,13 @@ class ResultPage extends StatelessWidget {
   final String resultText;
   final String bmiResult;
   final String interpretation;
+  final Color colour;
 
   ResultPage(
       {@required this.resultText,
       @required this.bmiResult,
-      @required this.interpretation});
+      @required this.interpretation,
+      this.colour});
 
   @override
   Widget build(BuildContext context) {
@@ -60,10 +62,11 @@ class ResultPage extends StatelessWidget {
             ),
           ),
           BottomButton(
+              colour: colour,
               onTap: () {
                 Navigator.pop(context);
               },
-              buttonTitle: 'RE-CALCULATE')
+              buttonTitle: 'RE-CALCULATE'),
         ],
       ),
     );
