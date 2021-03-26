@@ -1,5 +1,6 @@
 import 'package:bmi_calculator/components/calculator_brain.dart';
 import 'package:bmi_calculator/components/icon_content.dart';
+import 'package:bmi_calculator/screens/info_page.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:bmi_calculator/components/reusable_card.dart';
@@ -37,9 +38,11 @@ class _InputPageState extends State<InputPage> {
               color: Colors.white,
               size: 28,
             ),
-            padding: EdgeInsets.only(right: 12),
+            padding: EdgeInsets.only(right: 13),
             onPressed: () {
-              // do something
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return InfoPage();
+              }));
             },
           )
         ],
