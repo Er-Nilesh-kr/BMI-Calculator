@@ -41,7 +41,13 @@ class _InputPageState extends State<InputPage> {
             padding: EdgeInsets.only(right: 13),
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return InfoPage();
+                return InfoPage(
+                  colour: selectedGender == Gender.male
+                      ? Colors.blue
+                      : selectedGender == Gender.female
+                          ? Colors.pink
+                          : Colors.white,
+                );
               }));
             },
           )
@@ -226,10 +232,10 @@ class _InputPageState extends State<InputPage> {
         BottomButton(
           buttonTitle: 'CALCULATE',
           colour: selectedGender == Gender.male
-              ? Colors.blue.shade700
+              ? Colors.blue.shade800
               : selectedGender == Gender.female
                   ? Colors.pink.shade600
-                  : Colors.deepPurpleAccent.shade700,
+                  : Colors.deepPurple.shade800,
           onTap: () {
             CalculatorBrain calc =
                 CalculatorBrain(height: height, weight: weight);
@@ -242,10 +248,10 @@ class _InputPageState extends State<InputPage> {
                     resultText: calc.getResult(),
                     interpretation: calc.getInterpretation(),
                     colour: selectedGender == Gender.male
-                        ? Colors.blue.shade700
+                        ? Colors.blue.shade800
                         : selectedGender == Gender.female
                             ? Colors.pink.shade600
-                            : Colors.deepPurpleAccent.shade700,
+                            : Colors.deepPurple.shade800,
                   );
                 },
               ),
