@@ -44,7 +44,10 @@ class ResultPage extends StatelessWidget {
                 children: [
                   Text(
                     resultText.toUpperCase(),
-                    style: kResultTextStyle,
+                    style: kResultTextStyle.copyWith(
+                        color: resultText == 'Normal'
+                            ? Color(0xFF24D876)
+                            : Colors.red),
                     textAlign: TextAlign.center,
                   ),
                   Text(
@@ -54,8 +57,11 @@ class ResultPage extends StatelessWidget {
                   ),
                   Text(
                     interpretation,
-                    textAlign: TextAlign.center,
-                    style: kBodyTextStyle,
+                    textAlign: resultText == 'Normal'
+                        ? TextAlign.center
+                        : TextAlign.start,
+                    style: kBodyTextStyle.copyWith(
+                        fontSize: resultText == 'Normal' ? 23 : 18),
                   )
                 ],
               ),
