@@ -61,7 +61,7 @@ class ResultPage extends StatelessWidget {
                         ? TextAlign.center
                         : TextAlign.start,
                     style: kBodyTextStyle.copyWith(
-                        fontSize: resultText == 'Normal' ? 23 : 18),
+                        fontSize: resultText == 'Normal' ? 23 : 17),
                   )
                 ],
               ),
