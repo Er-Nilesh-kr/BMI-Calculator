@@ -29,13 +29,13 @@ class CalculatorBrain {
 
   String getInterpretation() {
     if (_bmi >= 30) {
-      return '⭐Consume less processed and sugary foods.\n\n⭐Eat more servings of vegetables and fruits.\n\n⭐Eat plenty of dietary fiber.\n\n⭐Engage in regular aerobic activity and focus on reducing daily stress';
+      return '⭐ Consume less processed/sugary foods.\n\n⭐ Eat more vegetables and fruits.\n\n⭐ Eat plenty of dietary fiber.\n\n⭐ Engage in regular aerobic activity.\n\n⭐ Focus on reducing daily stress';
     } else if (_bmi >= 25) {
-      return '⭐Consume less processed and sugary foods.\n\n⭐Eat more servings of vegetables and fruits.\n\n⭐Eat plenty of dietary fiber.\n\n⭐Engage in regular aerobic activity and focus on reducing daily stress';
+      return '⭐ Consume less processed/sugary foods.\n\n⭐ Eat more vegetables and fruits.\n\n⭐ Eat plenty of dietary fiber.\n\n⭐ Engage in regular aerobic activity.\n\n⭐ Focus on reducing daily stress';
     } else if (_bmi > 18.5) {
       return 'You have a normal BMI.\nGood job!';
     } else {
-      return '⭐Eat 3,500 calories more than that you are burning off.\n\n⭐Eat nutritious foods and drinks.\n\n⭐Stay away from foods that provide most of their calories from fats, sugars and refined grains.\n\n⭐Exercise can also raise your BMI by increasing muscle mass and possibly your appetite.';
+      return '⭐ Eat more calories than you burn off.\n\n⭐ Eat nutritious foods and drinks.\n\n⭐ Consume less processed/sugary foods.\n\n⭐ Exercise to increase your muscle mass.';
     }
   }
 }
