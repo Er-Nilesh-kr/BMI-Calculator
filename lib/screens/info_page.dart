@@ -17,7 +17,7 @@ class InfoPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Container(
-            margin: EdgeInsets.only(bottom: 1, top: 29),
+            margin: EdgeInsets.only(bottom: 3, top: 7),
             alignment: Alignment.center,
             child: Text(
               'What is BMI?',
@@ -28,7 +28,7 @@ class InfoPage extends StatelessWidget {
             children: [
               Container(
                 padding: EdgeInsets.only(
-                    top: 14.0, bottom: 14.0, left: 9.0, right: 9.0),
+                    top: 11.0, bottom: 11.0, left: 8.0, right: 8.0),
                 color: kactiveCardColour,
                 margin: EdgeInsets.only(left: 10.0, right: 10.0),
                 child: Text(
@@ -39,7 +39,7 @@ class InfoPage extends StatelessWidget {
             ],
           ),
           Container(
-            margin: EdgeInsets.only(top: 29),
+            margin: EdgeInsets.only(top: 19),
             alignment: Alignment.center,
             child: Text(
               'Contact Developer',
