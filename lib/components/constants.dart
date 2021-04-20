@@ -39,7 +39,7 @@ const kBMITextStyle = TextStyle(
 
 const kBodyTextStyle = TextStyle(fontSize: 18.0);
 
-const kInfoTextStyle = TextStyle(fontSize: 36.0, fontWeight: FontWeight.bold);
+const kInfoTextStyle = TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold);
 
 const kAboutBMITextStyle = TextStyle(
   fontSize: 17.0,
